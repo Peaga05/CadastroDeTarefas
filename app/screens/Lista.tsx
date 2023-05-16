@@ -39,6 +39,11 @@ const Lista = ({ navigation }: any) => {
             alert("Falha ao excluir: " + error)
         }
     }
+
+    const AlterarElemento = (id: any) =>{
+        navigation.navigate('Alterar', { id });
+    }
+
     return (
         <View>
             <View>
@@ -50,7 +55,14 @@ const Lista = ({ navigation }: any) => {
                      >
                         <Text>Excluir</Text>
                      </TouchableOpacity>
+
+                     <TouchableOpacity
+                        onPress={()=> AlterarElemento(tarefa.id)}
+                     >
+                        <Text>Alterar</Text>
+                     </TouchableOpacity>
                     </>  
+
                 ))}
             </View>
             <Button

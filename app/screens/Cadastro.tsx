@@ -63,6 +63,10 @@ const Cadastro = ({ navigation }: any) => {
                 title="Lista de tarefas"
                 onPress={() => navigation.navigate("Lista")}
             />
+             <Button
+                title="Lista de noticias"
+                onPress={() => navigation.navigate("Noticias")}
+            />
         </View>
     );
 }

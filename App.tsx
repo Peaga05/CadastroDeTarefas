@@ -6,12 +6,14 @@ import Alterar from './app/screens/Alterar';
 import Lista from './app/screens/Lista';
 import Cadastro from './app/screens/Cadastro';
 import CarouselCard from './app/screens/CarouselCard'
+import LoginGoogle from './app/screens/LoginGoogle';
 
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen name="Google Login" component={LoginGoogle} />
         <Stack.Screen name="Cadastrar" component={Cadastro} />
         <Stack.Screen name="Lista" component={Lista} />
         <Stack.Screen name="Alterar" component={Alterar} />
